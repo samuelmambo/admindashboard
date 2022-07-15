@@ -1,7 +1,7 @@
 <?php
 require_once('logics/dbconnection.php');
 
-$sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
+$sqlQuery =mysqli_query($conn,"SELECT *FROM contactus");
 
 
 
@@ -27,21 +27,21 @@ $sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>students</span>
+						<span>Messages</span>
                       
 					</div>
 					<div class="card-body">
-						<table class="table table-striped table-hover teble-responsive  table table-sm" style="fonr-style: 12px">
+						<table class="table table-striped  " style="font-style: 19px">
 							<th>
 								<tr>
 									<th>No.</th>
 									<th>Full Name</th>
+                                    <th>Last Name</th>
 									<th> Phone number</th>
 									<th>Email</th>
-									<th>Gender</th>
-									<th>Course</th>
+									<th>Message</th>
 									<th>Enrolled On</th>
-									<th>Actions</th>
+									
 								</tr>
 							</th>
 							<tbody>
@@ -49,26 +49,13 @@ $sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
 									<tr>
 										<td><?php echo  $fetchRecords['no']?> </td>
 										
-										<td><?php echo  $fetchRecords['fullname']?> </td>
+										<td><?php echo  $fetchRecords['firstname']?> </td>
+                                        <td><?php echo  $fetchRecords['lastname']?> </td>
 										<td><?php echo  $fetchRecords['phonenumber']?> </td>
-										<td><?php echo  $fetchRecords['emailaddress']?> </td>
-										<td><?php echo  $fetchRecords['gender']?> </td>
-										<td><?php echo  $fetchRecords['course']?> </td>
+										<td><?php echo  $fetchRecords['email']?> </td>
+										<td><?php echo  $fetchRecords['message']?> </td>
 										<td><?php echo  $fetchRecords['created-at']?> </td>
 										<td>
-										<a href="edit-enrollment.php?id=<?php echo  $fetchRecords['no']?>" class="btn btn-primary">
-											<i class="fa fa-edit"></i>
-									    </a>
-										<a href="view-enrollment.php?id=<?php echo $fetchRecords['no']  ?>" class="btn btn-info">
-											<i class="fa fa-eye"></i>
-									    </a>
-										<a href="delete-enrollment.php?id=<?php echo $fetchRecords['no'] ?>" class="btn btn-danger">
-											<i class="fa fa-trash"></i>
-									    </a>
-
-										</td>
-										</a>
-										</td>
 									</tr>
 
 								<?php } ?>
@@ -83,20 +70,6 @@ $sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
 		</div>
 
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<?php require_once('includes/scripts.php') ?>
 </body>

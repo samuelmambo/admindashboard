@@ -68,7 +68,6 @@ if( isset($_POST['submitButton']))
        </div>
      </main>
     </div>
-@@ -82,23 +83,23 @@
         <form action="enroll.php" method="POST">
             <div class="row"> 
                <div class="mb-3 col-lg-6 ">
