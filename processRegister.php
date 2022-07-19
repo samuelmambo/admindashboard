@@ -36,6 +36,6 @@
     }
     else
     {
-        $msg='Error'
+        $msg='Error';
     }
  }

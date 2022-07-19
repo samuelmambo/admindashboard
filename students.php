@@ -28,6 +28,9 @@ $sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>students</span>
+						<a href="add-enrollment.php" class="btn btn-lg btn-danger btn-sm pull-right" >
+							<i class="fa fa-plus-circle"></i>
+						</a>
                       
 					</div>
 					<div class="card-body">
@@ -54,7 +57,7 @@ $sqlQuery =mysqli_query($conn,"SELECT *FROM enrollment");
 										<td><?php echo  $fetchRecords['emailaddress']?> </td>
 										<td><?php echo  $fetchRecords['gender']?> </td>
 										<td><?php echo  $fetchRecords['course']?> </td>
-										<td><?php echo  $fetchRecords['created-at']?> </td>
+										<td><?php echo  $fetchRecords['created_at']?> </td>
 										<td>
 										<a href="edit-enrollment.php?id=<?php echo  $fetchRecords['no']?>" class="btn btn-primary">
 											<i class="fa fa-edit"></i>
