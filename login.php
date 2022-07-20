@@ -13,11 +13,17 @@ if( isset($_POST['login']))
     $newPass=$_POST['password'];
 
     $sql = mysqli_query($conn, "SELECT * FROM account WHERE username= '$username' and password='$newPass'");
-    $fetch=mysqli-fetch_arry($sql);
+    $fetch=mysqli_fetch_array($sql);
 
-    if($fetch >0)
-    header ('location: index.php');
+    if($fetch >0){
+        $_session['login']=$username;
+        header ('location: index.php');
 
+    }
+    else{
+        echo  "Error ";
+    }
+   
 }
 
 

@@ -53,13 +53,13 @@ $msg='';
                 <div class="row">
                     <div class="mb-3 col-lg-12">
                         <label for="passwrod" class="form-label font-weight-bold">Password:</label>
-                        <input type="text" name="passwrod" class="form-control">
+                        <input type="password" name="password" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-lg-12">
                         <label for="confirm Password" class="form-label font-weight-bold">Confirm Password:</label>
-                        <input type="text" name="confirm Password" class="form-control">
+                        <input type="Password" name="confirm_Password" class="form-control">
                     </div>
                 </div>
                 <button type="submit" name="signup" class="btn btn-primary">Submit</button>
